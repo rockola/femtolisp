@@ -5,6 +5,8 @@
 #if defined( __amd64__ ) || defined( _M_AMD64 )
 #  define ARCH_X86_64
 #  define __CPU__ 686
+#elif defined( __arm64__ )
+#  define __CPU__ arm64
 #elif defined( _M_IX86 )//msvs, intel, digital mars, watcom
 #  if ! defined( __386__ )
 #    error "unsupported target: 16-bit x86"
